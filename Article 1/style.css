@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+:root {
+    --border: #eadda8;
+    --navbg: #5C9DFF;
+    --navcolor: white;
+    --BG: #F9F9F9;
+    --paraColor: #333;
+    --subHeadings: #313d39;
+    --authorBG: transparent;
+}
+
+nav {
+    height: 10%;
+    width: 100%;
+    background-color: var(--navbg);
+    color: var(--navcolor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 23px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    min-height: 90vh;
+    width: 100%;
+    position: relative;
+    background-color: (var(--BG));
+}
+
+.article-part p {
+    color: var(--paraColor);
+}
+
+main .blog-part {
+    width: 72%;
+    height: 100%;
+    border-right: 1px solid var(--border);
+}
+
+main .author-part {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 28%;
+    height: 50vh;
+}
+
+main .blog-part {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    border-right: 1px solid var(--border);
+    padding: 90px 12px 0;
+}
+
+.blog-part>div {
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+
+}
+
+.blog-part .title-part {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.blog-part .article-part {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.blog-part>.title-part>div,
+.blog-part>.article-part>div {
+    width: 70%;
+    height: 100%;
+}
+
+.title-part>div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vw;
+}
+
+.blog-part .title-part div h2 {
+    font-weight: 500;
+    font-size: 1.5vw;
+    width: 82%;
+    color: var(--paraColor);
+}
+
+.title-part>div>.cont>span {
+    font-size: 1vw;
+    font-weight: 200;
+    font-family: cursive;
+}
+
+
+.article-part div {
+    padding: 60px 0 0;
+}
+
+.article-part div p {
+    /* font-size: 1vw; */
+    width: 80%;
+    line-height: 2;
+    padding: 0 0 20px;
+}
+
+div>p:first-child::first-letter {
+    font-size: 4vw;
+    font-weight: 300;
+    line-height: 1;
+}
+
+li {
+    margin: 40px 0 15px;
+}
+
+strong {
+    font-weight: 500;
+}
+
+h2#bheading {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--subHeadings);
+}
+
+.article-part p {
+    /* color: #1b1b1b; */
+    font-size: 15px;
+}
+
+img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+#aboutAuthor {
+    color: rgb(35, 35, 35);
+    padding: 15px 0 0;
+    font-size: 12px;
+}
+
+.card {
+    height: 350px;
+    width: 70%;
+    background-color: var(--authorBG);
+
+
+}
+
+.author-part {
+    padding: 120px 5px;
+}
+
+
+
+.card h2 {
+    border-bottom: 0.2px solid #EDEADE;
+    font-size: 12px;
+    width: 55%;
+    font-weight: 400;
+    margin-bottom: 22px;
+    color: rgb(39, 39, 39);
+    padding: 0 0 10px;
+}
+
+h3#name {
+    font-size: 0.8vw;
+
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.card p {
+    font-size: 8px;
+    width: 50%;
+    font-weight: 500;
+}
+
+strong {
+    font-size: 16px;
+}
+
+p {
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1100px) {
+    .article-part>#dv {
+        width: 90%;
+    }
+
+    .title-part #tdv {
+        width: 90%;
+    }
+
+    .title-part #tdv .cont span {
+        font-size: 12px;
+        font-weight: 400;
+        font-family: 'poppins', sans-serif;
+    }
+
+
+    .title-part>#tdv>#h2 {
+        font-size: 20px;
+    }
+
+    p#aboutAuthor {
+        width: 100%;
+    }
+
+    .title-part>div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    main {
+        flex-direction: column;
+    }
+
+    main>div.blog-part {
+        width: 100%;
+    }
+
+    img {
+        height: 20vh;
+    }
+
+    main .author-part {
+        width: 100%;
+    }
+
+    main .author-part #name {
+        font-size: 12px;
+    }
+}
